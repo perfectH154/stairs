@@ -10,8 +10,8 @@ It opens as a transparent, frameless, always-on-top window and displays GIF anim
 - Always on top by default
 - Keeps GIF aspect ratio with no stretching
 - Drag the pet with the left mouse button
-- Right-click the pet to switch between idle, happy, sad, and thinking
-- After 60 seconds without interaction, the pet shows `sad.GIF`
+- Right-click the pet to switch between idle, happy, sad, and wave
+- The pet stays idle unless you choose another state from the right-click menu
 - Right-click menu:
   - Switch face state
   - Enable or disable always on top
@@ -67,7 +67,7 @@ The current GIF mapping is:
 nature.GIF -> idle
 jump.GIF   -> happy
 sad.GIF    -> sad
-wave.GIF   -> thinking
+wave.GIF   -> wave
 ```
 
 The default window size is `240x240`.
@@ -87,7 +87,7 @@ Right-click the desktop pet to open the menu:
 - `待机`
 - `开心`
 - `委屈`
-- `疑惑`
+- `挥手`
 - `置顶` / `取消置顶`
 - `重置位置`
 - `退出`

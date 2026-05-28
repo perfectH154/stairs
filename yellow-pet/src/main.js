@@ -56,9 +56,9 @@ function showContextMenu() {
       }
     },
     {
-      label: "疑惑",
+      label: "挥手",
       click: () => {
-        petWindow.webContents.send("pet:set-face", "thinking");
+        petWindow.webContents.send("pet:set-face", "wave");
       }
     },
     { type: "separator" },

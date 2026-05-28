@@ -4,6 +4,14 @@ Yellow Pet is a small Windows desktop pet built with Electron, HTML, CSS, and pl
 
 It opens as a transparent, frameless, always-on-top window and displays GIF animations from the `assets` folder.
 
+## Download
+
+Download the ready-to-run Windows EXE:
+
+[Download Yellow Pet 1.0.0.exe](https://github.com/perfectH154/stairs/raw/main/yellow-pet/dist/Yellow%20Pet%201.0.0.exe)
+
+Windows may show a security warning because this app is not code-signed. Click `More info`, then `Run anyway`.
+
 ## Features
 
 - Transparent frameless desktop pet window

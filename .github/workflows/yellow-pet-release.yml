@@ -1,0 +1,45 @@
+name: Build Yellow Pet Release
+
+on:
+  push:
+    tags:
+      - "yellow-pet-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: yellow-pet/package-lock.json
+
+      - name: Install dependencies
+        working-directory: yellow-pet
+        run: npm ci
+
+      - name: Build x64 and ia32 portable EXE
+        working-directory: yellow-pet
+        run: npm run dist
+
+      - name: Upload GitHub Release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Yellow Pet ${{ github.ref_name }}
+          files: |
+            yellow-pet/dist/Yellow Pet-1.0.0-x64.exe
+            yellow-pet/dist/Yellow Pet-1.0.0-ia32.exe
+          body: |
+            Yellow Pet Windows portable builds.
+
+            - `Yellow Pet-1.0.0-x64.exe`: for most 64-bit Windows computers.
+            - `Yellow Pet-1.0.0-ia32.exe`: for older 32-bit Windows computers.

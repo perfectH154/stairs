@@ -6,9 +6,10 @@ It opens as a transparent, frameless, always-on-top window and displays GIF anim
 
 ## Download
 
-Download the ready-to-run Windows EXE:
+Download the ready-to-run Windows EXE for your system:
 
-[Download Yellow Pet 1.0.0.exe](https://github.com/perfectH154/stairs/raw/main/yellow-pet/dist/Yellow%20Pet%201.0.0.exe)
+- [Download Yellow Pet x64](https://github.com/perfectH154/stairs/releases/latest/download/Yellow%20Pet-1.0.0-x64.exe) for most modern 64-bit Windows computers.
+- [Download Yellow Pet ia32](https://github.com/perfectH154/stairs/releases/latest/download/Yellow%20Pet-1.0.0-ia32.exe) for older 32-bit Windows computers.
 
 Windows may show a security warning because this app is not code-signed. Click `More info`, then `Run anyway`.
 
@@ -102,7 +103,7 @@ Right-click the desktop pet to open the menu:
 
 ## Build EXE
 
-Create a portable Windows executable:
+Create portable Windows executables for both 64-bit and 32-bit Windows:
 
 ```powershell
 npm run dist
@@ -114,10 +115,11 @@ The output will be created in:
 dist/
 ```
 
-The generated portable executable is usually:
+The generated portable executables are:
 
 ```text
-dist/Yellow Pet 1.0.0.exe
+dist/Yellow Pet-1.0.0-x64.exe
+dist/Yellow Pet-1.0.0-ia32.exe
 ```
 
 For a quick unpacked build:
